@@ -498,7 +498,7 @@
                 <div class="row">
                     <div class="col-sm-7 text-left">
                         <div class="copyright">
-                            © <a href="#">BC Store</a> 2019 | Developed with Love by <a href="#">2FY</a>
+                            © <a href="#">B.C. Store</a> 2019 | Developed with Love by <a href="#">2FY</a>
                         </div>
                     </div>
 
