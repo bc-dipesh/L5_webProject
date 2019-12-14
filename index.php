@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="assets/css/et-line-icons.css">
 
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
 </head>
 
 <body>
@@ -190,6 +193,332 @@
             </div>
         </div>
     </section>
+
+    <section class="collection">
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 left-content">
+                        <div class="item">
+                            <div class="item-thumb">
+                                <a href="#">
+                                    <img src="#" alt="Item Image">
+                                </a>
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Kids</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 right-content">
+                        <div class="item">
+                            <div class="item-thumb">
+                                <a href="#">
+                                    <img src="#" alt="Item Image">
+                                </a>
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Men</h3>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-thumb">
+                                <a href="#">
+                                    <img src="#" alt="Item Image">
+                                </a>
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-title">Women</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trending bg-gray">
+        <div class="section-padding">
+            <div class="container">
+                <div class="section-top">
+                    <h2 class="section-title">Trending<span></span></h2>
+                </div>
+
+                <div class="row">
+                    <div class="trending-slider owl-carousel owl-theme">
+
+                        <div class="item">
+                            <div class="col-md-6">
+                                <div class="item-thumbnail">
+                                    <img src="#" alt="Item Thumbnail">
+                                </div>
+                                <div class="item-inner">
+                                    <button class="wish-list"><i class="fa fa-heart"></i><span>Add to wishlist</span></button>
+                                    <a class="fancybox" href="#" alt="Item Thumbnail"><i class="fa fa-search"></i><span> Quick View</span></a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="item-details">
+                                    <h3 class="item-title"><a href="#">Product name</a></h3>
+                                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-farction="5" /></div>
+                                    <div class="item-price">
+                                        <span class="curreny">Rs</span>
+                                        <span class="price">8000.00</span>
+                                    </div>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere mauris libero, nec dignissim sapien laoreet eu.
+                                        Vestibulum vitae neque mauris. Integer rutrum quam ac vehicula ullamcorper
+                                    </p>
+                                    <a href="#" class="btn">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-md-6">
+                                <div class="item-thumbnail">
+                                    <img src="#" alt="Item Thumbnail">
+                                </div>
+                                <div class="item-inner">
+                                    <button class="wish-list"><i class="fa fa-heart"></i><span>Add to wishlist</span></button>
+                                    <a class="fancybox" href="#" alt="Item Thumbnail"><i class="fa fa-search"></i><span> Quick View</span></a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="item-details">
+                                    <h3 class="item-title"><a href="#">Product name</a></h3>
+                                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-farction="5" /></div>
+                                    <div class="item-price">
+                                        <span class="curreny">Rs</span>
+                                        <span class="price">8000.00</span>
+                                    </div>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere mauris libero, nec dignissim sapien laoreet eu.
+                                        Vestibulum vitae neque mauris. Integer rutrum quam ac vehicula ullamcorper
+                                    </p>
+                                    <a href="#" class="btn">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-md-6">
+                                <div class="item-thumbnail">
+                                    <img src="#" alt="Item Thumbnail">
+                                </div>
+                                <div class="item-inner">
+                                    <button class="wish-list"><i class="fa fa-heart"></i><span>Add to wishlist</span></button>
+                                    <a class="fancybox" href="#" alt="Item Thumbnail"><i class="fa fa-search"></i><span> Quick View</span></a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="item-details">
+                                    <h3 class="item-title"><a href="#">Product name</a></h3>
+                                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-farction="5" /></div>
+                                    <div class="item-price">
+                                        <span class="curreny">Rs</span>
+                                        <span class="price">8000.00</span>
+                                    </div>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere mauris libero, nec dignissim sapien laoreet eu.
+                                        Vestibulum vitae neque mauris. Integer rutrum quam ac vehicula ullamcorper
+                                    </p>
+                                    <a href="#" class="btn">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-md-6">
+                                <div class="item-thumbnail">
+                                    <img src="#" alt="Item Thumbnail">
+                                </div>
+                                <div class="item-inner">
+                                    <button class="wish-list"><i class="fa fa-heart"></i><span>Add to wishlist</span></button>
+                                    <a class="fancybox" href="#" alt="Item Thumbnail"><i class="fa fa-search"></i><span> Quick View</span></a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="item-details">
+                                    <h3 class="item-title"><a href="#">Product name</a></h3>
+                                    <div class="rating"><input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star" data-empty="fa fa-star-o" data-farction="5" /></div>
+                                    <div class="item-price">
+                                        <span class="curreny">Rs</span>
+                                        <span class="price">8000.00</span>
+                                    </div>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere mauris libero, nec dignissim sapien laoreet eu.
+                                        Vestibulum vitae neque mauris. Integer rutrum quam ac vehicula ullamcorper
+                                    </p>
+                                    <a href="#" class="btn">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="subscribe-details">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="section-top">
+                            <h3 class="section-title">Stay up to date <span></span></h3>
+                        </div>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                    <div class="col-sm-7">
+                        <form class="subscribe-form" action="#" method="post">
+                            <input class="form-control" type="email" placeholder="myemail@email.com">
+                            <input class="btn btn-subscribe" type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients-logo bg-gray text-center">
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="item">
+                            <a href="#"><img src="#" alt="Brand Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="item">
+                            <a href="#"><img src="#" alt="Brand Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="item">
+                            <a href="#"><img src="#" alt="Brand Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="item">
+                            <a href="#"><img src="#" alt="Brand Logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="widget widget_about_us">
+                                <a class="footer-top" href="#"><img src="#" alt="Logo"></a>
+                                <div class="widget-details">
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                    <address>
+                                        Sahayoginagar-41, Kathmandu, Nepal
+                                    </address>
+                                    <span>+977-9861591162</span>
+                                    <span><a href="#">support@bcstore.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-6">
+                            <div class="widget widget_useful_links">
+                                <h4 class="widget-title">Useful links</h4>
+                                <div class="widget-details">
+                                    <span><i class="ti-control-record"></i><a href="#">About us</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Customer service</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">New Collection</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Best Sellers</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Manufacturers</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Privacy policy</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Terms & condition</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-6">
+                            <div class="widget widget_shop_links">
+                                <h4 class="widget-title">Shops</h4>
+                                <div class="widget-details">
+                                    <span><i class="ti-control-record"></i><a href="#">Trending Now</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Women</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Men</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Kids</a></span>
+                                    <span><i class="ti-control-record"></i><a href="#">Top brands</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="widget widget_instagram_feed">
+                                <h4 class="widget-title">Instagram Photos</h4>
+                                <div class="widget-details">
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                    <a href="#"><img src="#" alt="Instagram Image"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7 text-left">
+                        <div class="copyright">
+                            © <a href="#">BC Store</a> 2019 | Developed with Love by <a href="#">2FY</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 text-right">
+                        <div class="payment-list">
+                            <a href="#"><img src="#" alt="Payment Logo"></a>
+                            <a href="#"><img src="#" alt="Payment Logo"></a>
+                            <a href="#"><img src="#" alt="Payment Logo"></a>
+                            <a href="#"><img src="#" alt="Payment Logo"></a>
+                            <a href="#"><img src="#" alt="Payment Logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scroll-to-top" class="scroll-to-top">
+        <i class="fa fa-angle-double-up"></i>
+    </div>
 
 
 </body>
