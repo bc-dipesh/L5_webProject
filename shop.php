@@ -1,87 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="author" content="Dipesh B.C." />
-    <title>Collection - B.C. Store</title>
-
-    <!-- external stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!-- jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-    <!-- bootstrapcdn -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-    <!-- icon pack -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-    <!-- google font -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
-
-    <!-- tweenmax (greensock) cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-
-    <!-- for on scroll animations -->
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <script src="assets/js/wow.min.js"></script>
-</head>
-
-<body>
+<?php
+// IMPORT HEADER
+require 'assets/php/header.php';
+?>
+<div class="product-container">
     <div class="shop-container">
 
-        <!-- NAVIGATION STARTS -->
-
-        <div class="nav">
-            <div class="menu-open">
-                <ion-icon name="menu"></ion-icon>
-            </div>
-            <div class="brand">
-                <span><a href="index.html">B.C. Store</a></span>
-            </div>
-            <div class="cart">
-                <ion-icon name="cart"></ion-icon>
-            </div>
-            <div class="menu">
-                <div class="menu-close">
-                    <ion-icon name="close"></ion-icon>
-                </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="about.html">Our story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="media-menu">
-                    <ul>
-                        <li>
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </li>
-                        <li>
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </li>
-                        <li>
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </li>
-                        <li>
-                            <ion-icon name="logo-pinterest"></ion-icon>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- NAVIGATION ENDS -->
+        <?php
+        // IMPORT NAV 
+        require 'assets/php/nav.php';
+        ?>
 
         <div class="whitespaces"></div>
 
@@ -235,66 +162,6 @@
 
         <div class="whitespaces"></div>
 
-        <!-- FOOTER STARTS -->
-
-        <div class="container-fluid footer">
-            <div class="section container">
-                <footer>
-                    <div class="row">
-                        <div class="col-lg-3 block">
-                            <p>
-                                B.C. Store, Somewhere in the web,
-                                <br />
-                                Somewhere in the web. Since 2019
-                                <br />
-                                WEB
-                            </p>
-                        </div>
-                        <div class="col-lg-3 block">
-                            <p>
-                                FAQ
-                                <br />
-                                Return Policy
-                                <br />
-                                Shipping
-                            </p>
-                        </div>
-                        <div class="col-lg-3 block">
-                            <p>
-                                Careers
-                                <br />
-                                Community
-                                <br />
-                                Wholesale
-                            </p>
-                        </div>
-                        <div class="col-lg-3 block">
-                            <div class="media">
-                                <ul>
-                                    <li>
-                                        <ion-icon name="logo-facebook"></ion-icon>
-                                    </li>
-                                    <li>
-                                        <ion-icon name="logo-instagram"></ion-icon>
-                                    </li>
-                                    <li>
-                                        <ion-icon name="logo-twitter"></ion-icon>
-                                    </li>
-                                    <li>
-                                        <ion-icon name="logo-pinterest"></ion-icon>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-
-        <!-- FOOTER ENDS -->
-
-    </div>
-    <script src="assets/js/myjs.js"></script>
-</body>
-
-</html>
+        <?php
+        // IMPORT FOOTER
+        require 'assets/php/footer.php';
