@@ -1,3 +1,27 @@
+<?php
+//Get the basename
+$title = basename($_SERVER["PHP_SELF"]);
+
+// Compare and set the appropriate title
+switch ($title) {
+    case 'index.php';
+        $title = 'B.C. Store | Home';
+        break;
+    case 'product.php';
+        $title = 'B.C. Store | Product';
+        break;
+    case 'shop.php';
+        $title = 'B.C. Store | Collection';
+        break;
+    case 'contact.php';
+        $title = 'B.C. Store | Contact';
+        break;
+    case 'about.php';
+        $title = 'B.C. Store | About';
+        break;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="author" content="Dipesh B.C." />
-    <title><?php echo strtoupper(basename($_SERVER["PHP_SELF"], '.php')); ?></title>
+    <title><?php echo $title; ?></title>
 
     <!-- external stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
