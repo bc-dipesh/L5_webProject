@@ -4,6 +4,9 @@ $title = basename($_SERVER["PHP_SELF"]);
 
 // Compare and set the appropriate title
 switch ($title) {
+    case 'login.php';
+        $title = 'B.C. Store | Login';
+        break;
     case 'index.php';
         $title = 'B.C. Store | Home';
         break;
