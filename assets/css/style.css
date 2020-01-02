@@ -20,7 +20,7 @@ body {
 }
 
 .nav ion-icon:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .nav.scrolled {
@@ -53,7 +53,22 @@ body {
   position: absolute;
   line-height: 60px;
   right: 1.4em;
-  font-weight: 300;
+}
+
+/* Login/Signup form style
+---------------------------------------*/
+.loginform input[type="text"],
+.loginform input[type="password"],
+.loginform input[type="email"],
+.signupform input[type="text"],
+.signupform input[type="password"],
+.signupform input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 /* MENU
@@ -355,7 +370,6 @@ input[type="radio"]:checked + label:before {
 .product-sec ::placeholder,
 input {
   font-family: "Larsseit";
-  text-transform: uppercase;
   font-weight: 400;
   font-size: 10px;
   letter-spacing: 4px;
@@ -371,7 +385,8 @@ input {
   margin: 50px 0;
 }
 
-.add-prod a {
+.add-prod a,
+.add-prod button {
   padding: 20px 40px;
   background: #000;
   font-weight: 300;
@@ -380,7 +395,8 @@ input {
   text-decoration: none;
 }
 
-.add-prod a:hover {
+.add-prod a:hover,
+.add-prod button:hover {
   text-decoration: none;
 }
 
@@ -428,7 +444,6 @@ form label,
 textarea {
   font-family: "Larsseit";
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
@@ -497,5 +512,15 @@ textarea:focus {
 
   .content {
     width: 90% !important;
+  }
+}
+
+@media (max-width: 300px) {
+  #modalLRForm span.psw {
+    display: block;
+    float: none;
+  }
+  #modalLRForm .cancelbtn {
+    width: 100%;
   }
 }

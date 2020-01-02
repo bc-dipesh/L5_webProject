@@ -1,13 +1,13 @@
 <?php
 // IMPORT HEADER
-require 'assets/php/header.php';
+require './assets/include/header.php';
 ?>
 <div class="product-container">
     <div class="shop-container">
 
         <?php
         // IMPORT NAV 
-        require 'assets/php/nav.php';
+        require './assets/include/nav.php';
         ?>
 
         <div class="whitespaces"></div>
@@ -164,4 +164,4 @@ require 'assets/php/header.php';
 
         <?php
         // IMPORT FOOTER
-        require 'assets/php/footer.php';
+        require './assets/include/footer.php';

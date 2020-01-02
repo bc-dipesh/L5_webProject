@@ -6,11 +6,11 @@
                 <div class="row">
                     <div class="col-lg-3 block">
                         <p>
-                            B.C. Store, Somewhere in the web,
+                            B.C. Store
                             <br />
-                            Somewhere in the web. Since 2019
+                            Floating somewhere in the web.
                             <br />
-                            WEB
+                            Since 2019
                         </p>
                     </div>
                     <div class="col-lg-3 block">
@@ -57,8 +57,7 @@
     <!-- FOOTER ENDS -->
 
     </div>
-    </div>
-    <script src="assets/js/myjs.js"></script>
+    <script src="./assets/js/myjs.js"></script>
     </body>
 
     </html>
