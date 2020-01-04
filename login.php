@@ -1,12 +1,12 @@
 <?php
 // IMPORT HEADER
-require './assets/include/header.php';
+require './assets/include/header.inc.php';
 ?>
 <div class="login-container">
 
     <?php
     // IMPORT NAV 
-    require './assets/include/nav.php';
+    require './assets/include/nav.inc.php';
     ?>
 
     <!-- LOGIN STARTS HERE -->
@@ -23,7 +23,11 @@ require './assets/include/header.php';
                 <div class="prod-opt">
                     <?php if (!isset($_SESSION['userId'])) { ?>
                         <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">
-                            Login
+                            <?php if (isset($_GET['pwdUpdate'])) { ?>
+                                Password Successfully updated
+                            <?php } else { ?>
+                                Login
+                            <?php } ?>
                         </h3>
                         <form class="loginform" action="./assets/include/login.inc.php" method="post">
                             <label for="mailuid" class="wow fadeInUp" data-wow-delay="0.5s"><b>Username</b></label>
@@ -32,15 +36,18 @@ require './assets/include/header.php';
                             <label for="psw" class="wow fadeInUp" data-wow-delay="0.6s"><b>Password</b></label>
                             <input type="password" placeholder="Enter Password..." name="psw">
                             <button type="submit" name="login-submit">Login</button>
-                            <a href="signup.php" class="header-signup">Signup</a>
-                        <?php } else {
-                        // Display logout button if user has logged in
-                        ?>
-                            <form action="./assets/include/logout.inc.php" method="post">
-                                <button type="submit" name="logout-submit">Logout</button>
-                            </form>
-                        <?php } ?>
+                            <a href="./signup.php" class="wow fadeInUp" data-wow-delay="0.8s">Signup</a>
+                            </br>
+                            <a href="./reset-password.php" class="wow fadeInUp" data-wow-delay="0.8s">Forgot your password?</a>
                         </form>
+                    <?php } else {
+                        // Display logout button if user has logged in
+                    ?>
+                        <form action="./assets/include/logout.inc.php" method="post">
+                            <button type="submit" name="logout-submit">Logout</button>
+                        </form>
+                    <?php } ?>
+
                 </div>
             </div>
         </div>
@@ -52,4 +59,4 @@ require './assets/include/header.php';
 
     <?php
     // IMPORT FOOTER
-    require './assets/include/footer.php';
+    require './assets/include/footer.inc.php';

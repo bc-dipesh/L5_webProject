@@ -4,7 +4,7 @@ $dBUsername = "root";
 $dBPassword = "";
 $DBName = "login/signup";
 
-// Connect database
+// CONNECT DATABASE
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $DBName);
 
 if (!$conn) {

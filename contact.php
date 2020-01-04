@@ -1,12 +1,12 @@
 <?php
 // IMPORT HEADER
-require './assets/include/header.php';
+require './assets/include/header.inc.php';
 ?>
 <div class="contact-container">
 
     <?php
     // IMPORT NAV 
-    require './assets/include/nav.php';
+    require './assets/include/nav.inc.php';
     ?>
 
     <!-- DATA SECTION STARS -->
@@ -49,4 +49,4 @@ require './assets/include/header.php';
 
     <?php
     // IMPORT FOOTER
-    require './assets/include/footer.php';
+    require './assets/include/footer.inc.php';

@@ -1,5 +1,5 @@
 <?php
-// Delete current session
+// DESTROY CURRENT USER SESSION
 session_start();
 session_unset();
 session_destroy();

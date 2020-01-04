@@ -1,9 +1,9 @@
 <?php
 session_start();
-//Get the basename
+// GET THE BASENAME
 $title = basename($_SERVER["PHP_SELF"]);
 
-// Compare and set the appropriate title
+// COMPARE AND SET APPROPRIATE TITLE
 switch ($title) {
     case 'login.php';
         $title = 'B.C. Store | Login';
@@ -39,28 +39,27 @@ switch ($title) {
     <meta name="author" content="Dipesh B.C." />
     <title><?php echo $title; ?></title>
 
-    <!-- external stylesheet -->
+    <!-- EXTERNAL STYLESHEET -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- jquery -->
+    <!-- JQUERY -->
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
 
-    <!-- bootstrapcdn -->
+    <!-- BOOTSTRAP -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="./assets/js/bootstrap.min.js"></script>
 
-    <!-- icon pack -->
-    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <!-- ICON PACK -->
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 
-    <!-- google font -->
+    <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
 
-    <!-- tweenmax (greensock) cdn -->
+    <!-- TWEENMAX (GREENSHOCK) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
-    <!-- for on scroll animations -->
+    <!-- FOR ON SCROLL ANIMATIONS -->
     <link rel="stylesheet" href="./assets/css/animate.css" />
     <script src="./assets/js/wow.min.js"></script>
 </head>
