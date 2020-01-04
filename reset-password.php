@@ -44,8 +44,6 @@ require './assets/include/header.inc.php';
         </div>
     </div>
 
-
-
     <!-- RESET PASSWORD ENDS HERE -->
 
     <div class="whitespaces"></div>

@@ -22,7 +22,7 @@ if (isset($_POST["reset-request-submit"])) {
 
     // CHECK FOR SQL ERROR
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../../login.php?error=sqlerror");
+        header("Location: ../../login.php?msg=sqlError");
         exit();
     } else {
         // BIND PARAMETER
@@ -34,7 +34,7 @@ if (isset($_POST["reset-request-submit"])) {
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../../login.php?error=sqlerror");
+        header("Location: ../../login.php?msg=sqlError");
         exit();
     } else {
         $hashedToken = password_hash($token, PASSWORD_DEFAULT);

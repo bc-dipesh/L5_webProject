@@ -5,8 +5,10 @@ require './assets/include/header.inc.php';
 <div class="login-container">
 
     <?php
-    // IMPORT NAV 
+    // IMPORT NECESSARY FILES
     require './assets/include/nav.inc.php';
+    require './assets/include/variables.inc.php';
+    require './assets/include/functions.inc.php';
     ?>
 
     <!-- LOGIN STARTS HERE -->
@@ -15,47 +17,53 @@ require './assets/include/header.inc.php';
         <div class="row product-sec">
             <div class="col-lg-6 prod-left">
                 <div class="hero-image">
-                    <img src="images/hero.jpg" class="img wow fadeInUp" alt="" />
+                    <img src="./images/hero.jpg" class="img wow fadeInUp" alt="hero image" />
                 </div>
             </div>
 
             <div class="col-lg-6 prod-left">
                 <div class="prod-opt">
-                    <?php if (!isset($_SESSION['userId'])) { ?>
-                        <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">
-                            <?php if (isset($_GET['pwdUpdate'])) { ?>
-                                Password Successfully updated
-                            <?php } else { ?>
-                                Login
-                            <?php } ?>
-                        </h3>
-                        <form class="loginform" action="./assets/include/login.inc.php" method="post">
-                            <label for="mailuid" class="wow fadeInUp" data-wow-delay="0.5s"><b>Username</b></label>
-                            <input type="text" placeholder="Enter E-mail/Username..." name="mailuid">
+                    <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- DISPLAY INFORMATION ON SCREEN ACCORDING TO DATA -->
+                        <?php if (!empty($msg)) {
 
-                            <label for="psw" class="wow fadeInUp" data-wow-delay="0.6s"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password..." name="psw">
-                            <button type="submit" name="login-submit">Login</button>
-                            <a href="./signup.php" class="wow fadeInUp" data-wow-delay="0.8s">Signup</a>
-                            </br>
-                            <a href="./reset-password.php" class="wow fadeInUp" data-wow-delay="0.8s">Forgot your password?</a>
-                        </form>
-                    <?php } else {
-                        // Display logout button if user has logged in
-                    ?>
-                        <form action="./assets/include/logout.inc.php" method="post">
-                            <button type="submit" name="logout-submit">Logout</button>
-                        </form>
-                    <?php } ?>
-
+                            switch ($msg) {
+                                case "wrongPwd":
+                                    echo "$errorIcon Password incorrect";
+                                    displayLoginForm();
+                                    break;
+                                case "usernameOrPwdIncorrect":
+                                    echo "$errorIcon Username or Password incorrect";
+                                    displayLoginForm();
+                                    break;
+                                case "loginSuccess":
+                                    echo "$successIcon Successfully loggedin";
+                                    displayLogoutBtn();
+                                    break;
+                                case "sqlError":
+                                    echo "$errorIcon Unknown error please login again";
+                                    displayLoginForm();
+                                    break;
+                                case "pwdUpdateSuccessful":
+                                    echo "$successIcon Password updated successfully";
+                                    displayLoginForm();
+                                    break;
+                                case "successfullySignedUp":
+                                    echo "$successIcon Successfully signed up";
+                                    displayLoginForm();
+                                    break;
+                            }
+                        } else if (empty($msg)) {
+                            displayLoginForm();
+                        }
+                        ?>
+                    </h3>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- LOGIN ENDS HERE -->
-
-    <div class="whitespaces"></div>
 
     <?php
     // IMPORT FOOTER

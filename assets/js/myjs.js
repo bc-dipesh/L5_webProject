@@ -3,8 +3,8 @@
 new WOW().init();
 
 //Scroll activated background change
-$(function() {
-  $(document).scroll(function() {
+$(function () {
+  $(document).scroll(function () {
     var $nav = $(".nav");
     $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
   });
@@ -19,9 +19,12 @@ t1.to(".menu", 0.5, {
 });
 
 t1.reverse();
-$(document).on("click", ".menu-open", function() {
+$(document).on("click", ".menu-open", function () {
   t1.reversed(!t1.reversed());
 });
-$(document).on("click", ".menu-close", function() {
+$(document).on("click", ".menu-close", function () {
   t1.reversed(!t1.reversed());
 });
+
+
+

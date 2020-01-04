@@ -86,7 +86,7 @@ if (isset($_POST['reset-password-submit'])) {
                                 // BIND PARAMETER
                                 mysqli_stmt_bind_param($stmt, "s", $tokenEmail);
                                 mysqli_stmt_execute($stmt);
-                                header("Location: ../../login.php?pwdUpdate=success");
+                                header("Location: ../../login.php?msg=pwdUpdateSuccessful");
                             }
                         }
                     }

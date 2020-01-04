@@ -15,17 +15,33 @@ require './assets/include/header.inc.php';
         <div class="row product-sec">
             <div class="col-lg-6 prod-left">
                 <div class="hero-image">
-                    <img src="images/hero.jpg" class="img wow fadeInUp" alt="" />
+                    <?php if (!isset($_GET['img'])) {
+                        // SET DATA
+                        $title = "Daily Planner 2019";
+                        $price = 3000;
+                    ?>
+                        <img src="./images/hero.jpg" class="img wow fadeInUp" alt="hero image" />
+                    <?php } else {
+                        // UPDATE DATA
+                        $img = $_GET['img'];
+                        $title = $_GET['title'];
+                        $price = $_GET['price'];
+                    ?>
+                        <img src="<?php echo $img; ?>" class="img wow fadeInUp" alt="<?php echo $title; ?>" />
+                    <?php } ?>
                 </div>
             </div>
 
             <div class="col-lg-6 prod-left">
                 <div class="prod-opt">
                     <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">
-                        Daily Planner 2019
+                        <?php echo $title; ?>
                     </h3>
                     <p id="price" class="wow fadeInUp" data-wow-delay="0.5s">
-                        RS. 3000
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, eaque. Autem explicabo reiciendis voluptate vitae magni deserunt, ab mollitia atque.
+                    </p>
+                    <p id="price" class="wow fadeInUp" data-wow-delay="0.5s">
+                        RS. <?php echo $price; ?>
                     </p>
 
                     <div class="input-row">
@@ -47,58 +63,6 @@ require './assets/include/header.inc.php';
     </div>
 
     <!-- PRODUCT ENDS HERE -->
-
-    <!-- CATEGORIES SECTION STARTS -->
-
-    <div class="container-fluid">
-        <div class="row section shop">
-            <div class="col-lg-8">
-                <p class="wow fadeInUp" data-wow-delay="0.4s">
-                    Do not wait; the time will never be right. Start where you stand,
-                    and work with whatever tools you may have at your command, and
-                    better tools will be found as you go along.
-                </p>
-
-                <div class="link wow fadeInUp" data-wow-delay="0.6s">
-                    <a href="shop.html">learn more <ion-icon name="arrow-round-forward"></ion-icon></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row some-cards">
-                <div class="col-lg-3"></div>
-
-                <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.3s">
-                    <img src="images/prod-01.jpg" alt="prod-01" />
-                    <p id="prod-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
-                        voluptas nulla illum!
-                    </p>
-                </div>
-
-                <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.5s">
-                    <img src="images/prod-02.jpg" alt="prod-02" />
-                    <p id="prod-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
-                        voluptas nulla illum!
-                    </p>
-                </div>
-
-                <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.7s">
-                    <img src="images/prod-03.jpg" alt="prod-03" />
-                    <p id="prod-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
-                        voluptas nulla illum!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CATEGORIES SECTION ENDS -->
-
-    <div class="whitespaces"></div>
 
     <?php
     // IMPORT FOOTER
