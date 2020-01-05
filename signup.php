@@ -6,7 +6,6 @@ require './assets/include/header.inc.php';
     <?php
     // IMPORT NECESSARY FILES
     require './assets/include/nav.inc.php';
-    require './assets/include/variables.inc.php';
     require './assets/include/functions.inc.php';
     ?>
 
@@ -25,7 +24,7 @@ require './assets/include/header.inc.php';
                     <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">
                         <!-- DISPLAY INFORMATION ON SCREEN ACCORDING TO DATA -->
                         <?php if (!empty($msg)) {
-                            
+
                             switch ($msg) {
                                 case "invalidEmail":
                                     echo "$errorIcon Please provide a valid E-mail";
@@ -37,6 +36,12 @@ require './assets/include/header.inc.php';
                                     break;
                                 case "invalidUsername":
                                     echo "$errorIcon Please provide a valid username";
+                                    displaySignupForm();
+                                    break;
+                                case "weakPassword":
+                                    echo "$errorIcon The password's first character must be a letter, 
+                                    it must contain at least 4 characters and no more than 15 characters 
+                                    and no characters other than letters, numbers and the underscore may be used";
                                     displaySignupForm();
                                     break;
                                 case "passwordMismatch":

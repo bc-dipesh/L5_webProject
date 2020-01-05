@@ -1,8 +1,24 @@
 <?php
 // IMPORTANT VARIABLES
 $msg = "";
+$product_loc = "";
+$product_name = "";
+$product_price = "";
+$product_desc = "";
+
 if (isset($_GET['msg'])) {
     $msg = $_GET['msg'];
 }
+
+$queryString = "";
+if (!empty($_SERVER['QUERY_STRING']) && $title === 'B.C. Store | Product') {
+    $queryString = $_SERVER['QUERY_STRING'];
+    parse_str($queryString, $data);
+    $product_loc = $data['img'];
+    $product_name = $data['title'];
+    $product_price = $data['price'];
+    $product_desc = $data['desc'];
+}
+
 $successIcon = "<ion-icon name='checkmark' class='wow rollIn'></ion-icon>";
 $errorIcon = "<ion-icon name='close' class='wow rollIn'></ion-icon>";

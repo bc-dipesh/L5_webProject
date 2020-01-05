@@ -1,26 +1,31 @@
 <?php
 // CHECK IF USER HAS CLICKED SIGNUP BUTTON
 if (isset($_POST['signup-submit'])) {
+    session_start();
     require 'db.inc.php';
 
     // GATHER FORM DATA
-    $username = $_POST['uid'];
-    $email = $_POST['mail'];
-    $password = $_POST['psw'];
-    $confirm_password = $_POST['psw-confirm'];
+    $username = trim($_POST['uid']);
+    $email = trim($_POST['mail']);
+    $password = trim($_POST['psw']);
+    $confirm_password = trim($_POST['psw-confirm']);
+
 
     // FILTER ABOVE DATA
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../../signup.php?msg=invalidEmail&uid=" . $username);
+        header("Location: ../../signup.php?msg=invalidEmail&uid=$username");
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$", $username)) {
         header("Location: ../../signup.php?msg=invalidEmail&uid");
         exit();
-    } else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-        header("Location: ../../signup.php?msg=invalidUsername&email=" . $email);
+    } else if (!preg_match("/^[a-zA-Z]*$/", $username)) {
+        header("Location: ../../signup.php?msg=invalidUsername&email=$email");
+        exit();
+    } else if (!preg_match("/^[a-zA-Z]\w{3,14}$/", $password)) {
+        header("Location: ../../signup.php?msg=weakPassword&uid=$username&email=$email");
         exit();
     } else if ($password !== $confirm_password) {
-        header("Location: ../../signup.php?msg=passwordMismatch&uid=" . $username . "&mail=" . $email);
+        header("Location: ../../signup.php?msg=passwordMismatch&uid=$username&mail=$email");
         exit();
     } else {
         // MAKE PREPARED STATEMENT
@@ -53,6 +58,8 @@ if (isset($_POST['signup-submit'])) {
                     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
                     mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
                     mysqli_stmt_execute($stmt);
+                    $_SESSION['msg'] = 'successfullySignedUp';
+                    $_SESSION['username'] = $username;
                     header("location: ../../login.php?msg=successfullySignedUp");
                     exit();
                 }

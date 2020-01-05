@@ -1,6 +1,7 @@
 <?php
 // CHECK IF USER CLICKED THE LOGIN BUTTON
 if (isset($_POST['login-submit'])) {
+    session_start();
     require 'db.inc.php';
 
     // GATHER FORM DATA
@@ -13,7 +14,8 @@ if (isset($_POST['login-submit'])) {
 
     // CHECK FOR SQL ERROR
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../../login.php?msg=sqlError");
+        $_SESSION['msg'] = 'sqlError';
+        header("location: ../../login.php");
         exit();
     } else {
         // BIND AND EXECUTE STATEMENT
@@ -22,24 +24,33 @@ if (isset($_POST['login-submit'])) {
         $result = mysqli_stmt_get_result($stmt);
 
         if ($row = mysqli_fetch_assoc($result)) {
+            $_SESSION['userId'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
             // MATCH USERPASSWORD FROM THE DATABASE
             $psw_check = password_verify($password, $row['pwd']);
             if ($psw_check === FALSE) {
-                header("location: ../../login.php?msg=wrongPwd");
+                $_SESSION['msg'] = 'wrongPwd';
+                header("location: ../../login.php");
                 exit();
             } else if ($psw_check === TRUE) {
-                session_start();
-                $_SESSION['userId'] = $row['id'];
-                $_SESSION['username'] = $row['username'];
-
-                header("location: ../../login.php?msg=loginSuccess");
+                session_name("member");
+                if (!empty($row['isAdmin'])) {
+                    if ($row['isAdmin'] === 1) {
+                        session_name("admin");
+                        $_SESSION['isAdmin'] = TRUE;
+                    }
+                }
+                $_SESSION['msg'] = 'loginSuccess';
+                header("location: ../../login.php");
                 exit();
             } else {
-                header("location: ../../login.php?msg=wrongPwd");
+                $_SESSION['msg'] = 'wrongPwd';
+                header("location: ../../login.php");
                 exit();
             }
         } else {
-            header("location: ../../login.php?msg=usernameOrPwdIncorrect");
+            $_SESSION['msg'] = 'usernameOrPwdIncorrect';
+            header("location: ../../login.php");
             exit();
         }
         // CLOSE DATABASE CONNECTION

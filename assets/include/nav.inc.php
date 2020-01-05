@@ -19,7 +19,6 @@
                 <li><a href="./signup.php">Signup</a></li>
                 <li><a href="./index.php">Home</a></li>
                 <li><a href="./shop.php">Collection</a></li>
-                <li><a href="./product.php">Product</a></li>
                 <li><a href="./about.php">Our story</a></li>
                 <li><a href="./contact.php">Contact</a></li>
             </ul>

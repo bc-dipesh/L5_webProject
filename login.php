@@ -7,7 +7,6 @@ require './assets/include/header.inc.php';
     <?php
     // IMPORT NECESSARY FILES
     require './assets/include/nav.inc.php';
-    require './assets/include/variables.inc.php';
     require './assets/include/functions.inc.php';
     ?>
 
@@ -25,7 +24,8 @@ require './assets/include/header.inc.php';
                 <div class="prod-opt">
                     <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">
                         <!-- DISPLAY INFORMATION ON SCREEN ACCORDING TO DATA -->
-                        <?php if (!empty($msg)) {
+                        <?php if (isset($_SESSION['msg'])) {
+                            $msg = $_SESSION['msg'];
 
                             switch ($msg) {
                                 case "wrongPwd":
@@ -53,7 +53,7 @@ require './assets/include/header.inc.php';
                                     displayLoginForm();
                                     break;
                             }
-                        } else if (empty($msg)) {
+                        } else if (!isset($_SESSION['msg'])) {
                             displayLoginForm();
                         }
                         ?>

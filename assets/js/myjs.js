@@ -26,5 +26,25 @@ $(document).on("click", ".menu-close", function () {
   t1.reversed(!t1.reversed());
 });
 
+// SHOW ITEMS ACCORDING TO CATEGORY SELECTION
+
+function showCategory(selection) {
+  var bestSeller = document.getElementById("bestSeller");
+  var latestCollection = document.getElementById("latestCollection");
+  var allProducts = document.getElementById("allProducts");
+  var checkbox1 = document.getElementById("option1");
+  var checkbox2 = document.getElementById("option2");
+  if (checkbox1.checked && checkbox2.checked) {
+    bestSeller.style.display = "block";
+    latestCollection.style.display = "block";
+  } else if (checkbox1.checked) {
+    bestSeller.style.display = "block";
+    latestCollection.style.display = "none";
+  } else if (checkbox2.checked) {
+    bestSeller.style.display = "none";
+    latestCollection.style.display = "block";
+  } 
+}
+
 
 

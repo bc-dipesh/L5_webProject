@@ -5,8 +5,9 @@ require './assets/include/header.inc.php';
 <div class="product-container">
 
     <?php
-    // IMPORT NAV 
+    // IMPORT NECESSARY FILES 
     require './assets/include/nav.inc.php';
+    require './assets/include/variables.inc.php';
     ?>
 
     <!-- PRODUCT STARTS HERE -->
@@ -15,33 +16,26 @@ require './assets/include/header.inc.php';
         <div class="row product-sec">
             <div class="col-lg-6 prod-left">
                 <div class="hero-image">
-                    <?php if (!isset($_GET['img'])) {
-                        // SET DATA
-                        $title = "Daily Planner 2019";
-                        $price = 3000;
-                    ?>
-                        <img src="./images/hero.jpg" class="img wow fadeInUp" alt="hero image" />
+                    <?php if (!empty($queryString)) { ?>
+                        <img src="<?php echo $product_loc; ?>" class="img wow fadeInUp" alt="<?php echo $product_name; ?>" />
                     <?php } else {
-                        // UPDATE DATA
-                        $img = $_GET['img'];
-                        $title = $_GET['title'];
-                        $price = $_GET['price'];
+                        header("location: ./shop.php");
+                        exit();
+                    }
                     ?>
-                        <img src="<?php echo $img; ?>" class="img wow fadeInUp" alt="<?php echo $title; ?>" />
-                    <?php } ?>
                 </div>
             </div>
 
             <div class="col-lg-6 prod-left">
                 <div class="prod-opt">
                     <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">
-                        <?php echo $title; ?>
+                        <?php echo $product_name; ?>
                     </h3>
                     <p id="price" class="wow fadeInUp" data-wow-delay="0.5s">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, eaque. Autem explicabo reiciendis voluptate vitae magni deserunt, ab mollitia atque.
+                        <?php echo $product_desc; ?>
                     </p>
                     <p id="price" class="wow fadeInUp" data-wow-delay="0.5s">
-                        RS. <?php echo $price; ?>
+                        RS. <?php echo $product_price; ?>
                     </p>
 
                     <div class="input-row">
