@@ -55,14 +55,18 @@ body {
   right: 1.4em;
 }
 
-/* Login/Signup/reset-password 
+/* Login/Signup/reset-password/prod-upload-form 
 ---------------------------------------*/
 .loginform input[type="text"],
 .loginform input[type="password"],
 .signupform input[type="text"],
 .signupform input[type="password"],
 .signupform input[type="email"],
-.reset-password-form input[type="email"] {
+.reset-password-form input[type="email"],
+#prod-upload-form input[type="text"],
+#prod-upload-form select,
+#prod-upload-form textarea
+{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -71,10 +75,24 @@ body {
   box-sizing: border-box;
 }
 
+#prod-upload-form input
+{
+  width: 100%;
+}
+
+/* .prod-upload-form label {
+  font-family: "Larsseit";
+  font-size: 12px;
+  letter-spacing: 2px;
+  display: block;
+} */
+
 .loginform button,
 .logoutForm button,
 .signupform button,
-.reset-password-form button {
+.reset-password-form,
+#prod-upload-form button
+{
   margin-top: 20px;
   margin-right: 20px;
   padding: 10px 20px;
@@ -325,6 +343,7 @@ footer p {
   opacity: 0;
   z-index: -1;
 }
+
 .category-form .inputGroup label:after {
   width: 32px;
   height: 32px;
@@ -426,6 +445,7 @@ footer p {
   justify-items: center;
   align-items: center;
 }
+
 .collection .productImage {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;

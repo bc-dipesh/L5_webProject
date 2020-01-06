@@ -38,6 +38,8 @@ if (isset($_POST['login-submit'])) {
                     if ($row['isAdmin'] === 1) {
                         session_name("admin");
                         $_SESSION['isAdmin'] = TRUE;
+                        header("location: ../../adminPanel.php");
+                        exit();
                     }
                 }
                 $_SESSION['msg'] = 'loginSuccess';

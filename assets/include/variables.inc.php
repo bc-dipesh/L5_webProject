@@ -1,10 +1,12 @@
 <?php
 // IMPORTANT VARIABLES
 $msg = "";
+$product_id = 0;
 $product_loc = "";
 $product_name = "";
 $product_price = "";
 $product_desc = "";
+$product_table = "";
 
 if (isset($_GET['msg'])) {
     $msg = $_GET['msg'];
