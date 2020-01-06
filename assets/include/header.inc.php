@@ -14,6 +14,9 @@ switch ($title) {
     case 'index.php';
         $title = 'B.C. Store | Home';
         break;
+    case 'favourites.php';
+        $title = 'B.C. Store | Favourites';
+        break;
     case 'product.php';
         $title = 'B.C. Store | Product';
         break;
@@ -62,6 +65,7 @@ switch ($title) {
     <!-- FOR ON SCROLL ANIMATIONS -->
     <link rel="stylesheet" href="./assets/css/animate.css" />
     <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/functions.js"></script>
 </head>
 
 <body>

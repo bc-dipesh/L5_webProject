@@ -16,16 +16,13 @@ require './assets/include/header.inc.php';
         <div class="row product-sec">
             <div class="col-lg-6 prod-left">
                 <div class="hero-image">
-
+                   <h1>Available Actions</h1>
                 </div>
             </div>
 
             <div class="col-lg-6 prod-left">
                 <div class="prod-opt">
                     <form id="prod-upload-form" action="./assets/include/upload-file.inc.php" method="post" enctype="multipart/form-data">
-                        <label for="prod-id" class="wow fadeInUp" data-wow-delay="0.5s"><b>Product ID</b></label>
-                        <input type="number" placeholder="Enter Product ID..." name="prod-id" value="<?php if (isset($_GET['prod-id'])) echo $_GET['prod-id']; ?>" required>
-
                         <label for="prod-name" class="wow fadeInUp" data-wow-delay="0.6s"><b>Product name</b></label>
                         <input type="text" placeholder="Enter Product name..." name="prod-name" value="<?php if (isset($_GET['prod-name'])) echo $_GET['prod-name']; ?>" required>
 

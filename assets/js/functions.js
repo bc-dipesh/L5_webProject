@@ -19,15 +19,15 @@ function showCategory(selection) {
         bestSeller.style.display = "none";
         latestCollection.style.display = "none";
     }
-}
-
-function showSuggestion() {
+  }
+  
+  function showSuggestion() {
     var checkbox1 = document.getElementById("option1");
     var checkbox2 = document.getElementById("option2");
     var minPrice = document.getElementById('price-min').value;
     var maxPrice = document.getElementById('price-max').value;
     var str = document.getElementById('search-text').value;
-
+  
     // APPEND INFORMATION TO QUERY STRING
     if (checkbox1.checked) {
         str += "&table_name=bestSeller";
@@ -36,9 +36,9 @@ function showSuggestion() {
     } else {
         str += "&table_name=bestSeller";
     }
-
+  
     str += "&price-min=" + minPrice + "&price-max=" + maxPrice;
-
+  
     var output = document.getElementById('output');
     if (str.length == 0) {
         output.innerHTML = '';
@@ -53,4 +53,4 @@ function showSuggestion() {
         xmlhttp.open("GET", "./search.php?q=" + str, true);
         xmlhttp.send();
     }
-}
+  }

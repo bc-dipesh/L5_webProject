@@ -37,8 +37,13 @@ require './assets/include/header.inc.php';
                                     displayLoginForm();
                                     break;
                                 case "loginSuccess":
-                                    echo "$successIcon Successfully loggedin";
-                                    displayLogoutBtn();
+                                    if(isset($_SESSION['isAdmin'])) {
+                                        echo "$adminIcon Welcome Admin";
+                                        displayLogoutBtn();
+                                    } else {
+                                        echo "$successIcon Successfully loggedin";
+                                        displayLogoutBtn();
+                                    } 
                                     break;
                                 case "sqlError":
                                     echo "$errorIcon Unknown error please login again";

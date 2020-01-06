@@ -8,6 +8,14 @@ require './assets/include/header.inc.php';
     // IMPORT NECESSARY FILES 
     require './assets/include/nav.inc.php';
     require './assets/include/variables.inc.php';
+    $isAdmin = FALSE;
+    $isUser = FALSE;
+    if (isset($_SESSION['isAdmin'])) {
+        $isAdmin = $_SESSION['isAdmin'];
+    }
+    if (isset($_SESSION['isUser'])) {
+        $isUser = $_SESSION['isUser'];
+    }
     ?>
 
     <!-- PRODUCT STARTS HERE -->
@@ -37,19 +45,15 @@ require './assets/include/header.inc.php';
                     <p id="price" class="wow fadeInUp" data-wow-delay="0.5s">
                         RS. <?php echo $product_price; ?>
                     </p>
-
-                    <div class="input-row">
-                        <input type="radio" id="radio-input-1" checked />
-                        <label for="radio-input-1" class="input-helper input-helper--radio wow fadeInUp" data-wow-delay="0.6s">add monogram (+Rs. 100)</label>
-                        <br />
-                        <input type="radio" id="radio-input-2" />
-                        <label for="radio-input-2" class="input-helper input-helper--radio wow fadeInUp" data-wow-delay="0.7s">add gift wrap (+Rs. 100)</label>
-                    </div>
                     <br />
-                    <input type="number" placeholder="QTY" class="wow fadeInUp" data-wow-delay="0.8s" />
-                    <input type="number" placeholder="SIZE" class="wow fadeInUp" data-wow-delay="1s" />
                     <div class="add-prod wow fadeInUp" data-wow-delay="1.1s">
-                        <a href="#">Add to bag</a>
+                        <?php if ($isAdmin) { ?>
+                            <a href="./edit.php?<?php echo $queryString; ?>">Edit/Update Product</a>
+                            <a href="./addProd.php">Add Product</a><br><br><br>
+                            <a href="./deleteProd.php?img=<?php echo $product_loc; ?>">Delete Product</a>
+                        <?php } else if ($isUser) { ?>
+                            <a href="./favourites.php?<?php echo $queryString; ?>">Add to favourite</a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

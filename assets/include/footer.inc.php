@@ -58,7 +58,6 @@
 
     </div>
     <script src="./assets/js/myjs.js"></script>
-    <script src="./assets/js/functions.js"></script>
     </body>
 
     </html>

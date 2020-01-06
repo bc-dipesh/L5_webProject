@@ -33,14 +33,15 @@ if (isset($_POST['login-submit'])) {
                 header("location: ../../login.php");
                 exit();
             } else if ($psw_check === TRUE) {
-                session_name("member");
                 if (!empty($row['isAdmin'])) {
                     if ($row['isAdmin'] === 1) {
                         session_name("admin");
                         $_SESSION['isAdmin'] = TRUE;
-                        header("location: ../../adminPanel.php");
-                        exit();
                     }
+                } else {
+                    session_name("member");
+                    $_SESSION['isUser'] = TRUE;
+                    $_SESSION['fav_prod'] = "";
                 }
                 $_SESSION['msg'] = 'loginSuccess';
                 header("location: ../../login.php");

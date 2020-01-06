@@ -58,6 +58,9 @@ function getProducts($table_name)
     $sql = "SELECT * FROM $table_name;";
     $markup = "";
     $products = array();
+    if(isset($_SESSION['isUser'])) {
+        $isUser = $_SESSION['isUser'];
+    }
 
     if ($result = mysqli_query($conn, $sql)) {
         // FETCH AND STORE PRODUCTS FROM ASSOCIATIVE ARRAY

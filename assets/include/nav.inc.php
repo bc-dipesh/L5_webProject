@@ -17,6 +17,11 @@
             <ul>
                 <li><a href="./login.php">Login</a></li>
                 <li><a href="./signup.php">Signup</a></li>
+                <?php if (isset($_SESSION['isUser'])) {
+                    if ($_SESSION['isUser']) { ?>
+                        <li><a href="./favourites.php">Favourites</a></li>
+                <?php }
+                } ?>
                 <li><a href="./index.php">Home</a></li>
                 <li><a href="./shop.php">Collection</a></li>
                 <li><a href="./about.php">Our story</a></li>

@@ -7,13 +7,15 @@ $product_name = "";
 $product_price = "";
 $product_desc = "";
 $product_table = "";
+$queryString = "";
+$fav_arr = array();
 
 if (isset($_GET['msg'])) {
     $msg = $_GET['msg'];
 }
 
 $queryString = "";
-if (!empty($_SERVER['QUERY_STRING']) && $title === 'B.C. Store | Product') {
+if (!empty($_SERVER['QUERY_STRING']) && ($title === 'B.C. Store | Product') || ($title === 'edit.php')) {
     $queryString = $_SERVER['QUERY_STRING'];
     parse_str($queryString, $data);
     $product_loc = $data['img'];
@@ -24,3 +26,4 @@ if (!empty($_SERVER['QUERY_STRING']) && $title === 'B.C. Store | Product') {
 
 $successIcon = "<ion-icon name='checkmark' class='wow rollIn'></ion-icon>";
 $errorIcon = "<ion-icon name='close' class='wow rollIn'></ion-icon>";
+$adminIcon = "<ion-icon name='person' class='wow rollIn'></ion-icon>";
