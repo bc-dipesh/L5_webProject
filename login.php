@@ -52,6 +52,10 @@ require './assets/include/header.inc.php';
                                     echo "$successIcon Successfully signed up";
                                     displayLoginForm();
                                     break;
+                                case "notRegistered":
+                                    echo "$errorIcon Username not found. Please signup";
+                                    displayLoginForm();
+                                    break;
                             }
                         } else if (!isset($_SESSION['msg'])) {
                             displayLoginForm();

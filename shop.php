@@ -10,8 +10,7 @@ require './assets/include/header.inc.php';
         require './assets/include/functions.inc.php';
         ?>
 
-        <div class="whitespaces">
-        </div>
+        <div class="whitespaces"></div>
 
         <!-- COLLECTION STARTS -->
 
@@ -23,6 +22,15 @@ require './assets/include/header.inc.php';
                     <div class="row some-cards">
                         <div class='col-lg-12 wow fadeInUp'>
                             <p id="heading" class="category-heading">Categories</p>
+                            <h3 id="heading" class="search-heading">Search Products</h3>
+                            <form>
+                                <label for="price-min">Min-Price:</label>
+                                <input type="range" name="price-min" id="price-min" value="1000" min="0" max="1000">
+                                <label for="price-max">Max-Price:</label>
+                                <input type="range" name="price-max" id="price-max" value="2000" min="2000" max="5000">
+                                <input type="text" id="search-text" class="form-control" onkeyup="showSuggestion();">
+                            </form>
+                            <p><span id="output"></span></p>
                             <form class="category-form" action="./assets/include/variables.inc.php" method="POST">
                                 <div class="inputGroup">
                                     <input id="option1" name="category" value="bestSeller" type="checkbox" onclick="showCategory('bestSeller');" />

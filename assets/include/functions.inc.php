@@ -57,7 +57,6 @@ function getProducts($table_name)
 
     $sql = "SELECT * FROM $table_name;";
     $markup = "";
-    $index = 0;
     $products = array();
 
     if ($result = mysqli_query($conn, $sql)) {
@@ -83,7 +82,7 @@ function getProducts($table_name)
                                 $title
                             </div>
                         </div>";
-            $products[$index++] = $markup;
+            $products[] = $markup;
         }
         return $products;
     } else {

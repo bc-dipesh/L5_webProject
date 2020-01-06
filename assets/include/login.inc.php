@@ -49,7 +49,7 @@ if (isset($_POST['login-submit'])) {
                 exit();
             }
         } else {
-            $_SESSION['msg'] = 'usernameOrPwdIncorrect';
+            $_SESSION['msg'] = 'notRegistered';
             header("location: ../../login.php");
             exit();
         }
